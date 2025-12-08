@@ -1,8 +1,10 @@
-// Vite automatically adds the base path from vite.config.ts (base: '/Webpage')
-// No need to manually add /Webpage prefix - it causes double prefixing on GitHub Pages
+// Use Vite's BASE_URL which is automatically set from vite.config.ts (base: '/Webpage')
+// This works correctly in both dev (/) and production (/Webpage/)
 export const getImagePath = (path: string) => {
-  // Return path as-is, Vite will handle the base path injection
-  return path.startsWith('/') ? path : `/${path}`
+  const base = import.meta.env.BASE_URL
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  // Remove trailing slash from base and leading slash is already in cleanPath
+  return `${base.replace(/\/$/, '')}${cleanPath}`
 }
 
 // Utility für zufällige Bildauswahl aus dem erweiterten Pool
