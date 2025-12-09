@@ -1145,13 +1145,15 @@ body {
   }
 
   img::after {
-    content: '🖼️';
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
-    opacity: 0.7;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
     z-index: 1;
   }
 
@@ -1175,14 +1177,15 @@ body {
   }
 
   img[src=""]::after, img:not([src])::after, img[src*="missing"]::after {
-    content: '🖼️';
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
-    opacity: 0.7;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
     z-index: 1;
-    color: white;
   }
 }

@@ -38,12 +38,19 @@ export const createBluePlaceholder = (width: number = 400, height: number = 300)
   ctx.fillStyle = gradient
   ctx.fillRect(0, 0, width, height)
   
-  // Add icon in center
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.7)'
-  ctx.font = '48px serif'
-  ctx.textAlign = 'center'
-  ctx.textBaseline = 'middle'
-  ctx.fillText('🖼️', width / 2, height / 2)
+  // Add simple geometric shape in center
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)'
+  const centerX = width / 2
+  const centerY = height / 2
+  const size = Math.min(width, height) * 0.2
+  
+  // Draw simple rectangle outline
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)'
+  ctx.lineWidth = 3
+  ctx.strokeRect(centerX - size, centerY - size, size * 2, size * 2)
+  
+  // Draw smaller inner rectangle
+  ctx.strokeRect(centerX - size * 0.6, centerY - size * 0.6, size * 1.2, size * 1.2)
   
   return canvas.toDataURL()
 }

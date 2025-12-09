@@ -10,7 +10,7 @@ const ValuesSection: React.FC = () => {
     {
       title: 'Inclusion',
       description: 'We believe technology education should be accessible to everyone, regardless of background, gender, or location.',
-      image: getImagePath('/images/randomPictures/studentgroupguys.jpg')
+      image: getImagePath('/images/randomPictures/group_girls.jpg')
     },
     {
       title: 'Empowerment', 

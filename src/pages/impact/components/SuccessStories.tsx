@@ -27,7 +27,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = () => {
       role: 'Database Management Specialist',
       company: 'Bank of Ghana',
       quote: 'IT For Youth Ghana completely changed my perspective on technology. The skills I acquired opened doors I never thought possible.',
-      image: getImagePath('/images/people/elisabeth.jpg'),
+      image: getImagePath('/images/people/danielle.jpg'),
       program: 'Rural Tech Connect',
       year: '2022'
     },
