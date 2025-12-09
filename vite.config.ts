@@ -4,8 +4,8 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  // GitHub Pages configuration
-  base: '/Webpage',
+  // GitHub Pages configuration - Custom domain uses root path
+  base: '/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')

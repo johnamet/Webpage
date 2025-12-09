@@ -10,8 +10,8 @@ export const validateImageExists = async (imagePath: string): Promise<boolean> =
 }
 
 export const getOptimizedImagePath = (path: string): string => {
-  // Handle base path correctly for production
-  const basePath = import.meta.env.DEV ? '' : '/Webpage'
+  // Handle base path correctly for production - Custom domain uses root path
+  const basePath = ''
   const fullPath = path.startsWith('/') ? `${basePath}${path}` : `${basePath}/${path}`
   
   // Log image paths in development for debugging
