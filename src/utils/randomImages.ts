@@ -1,6 +1,6 @@
 // Professional image path handling with error logging and validation
-// Use Vite's BASE_URL which is automatically set from vite.config.ts (base: '/Webpage')
-// This works correctly in both dev (/) and production (/Webpage/)
+// Use Vite's BASE_URL which is automatically set from vite.config.ts (base: '/')
+// This works correctly for custom domain setup
 export const getImagePath = (path: string) => {
   try {
     const base = import.meta.env.BASE_URL || '/'

@@ -251,8 +251,8 @@ export const RANDOM_IMAGES = {
 
 ### Aktuelle getImagePath (für GitHub Pages optimiert)
 export const getImagePath = (path: string): string => {
-  // GitHub Pages Base URL bereits durch Vite config gehandhabt
-  return path.startsWith('/') ? `/Webpage${path}` : `/Webpage/${path}`
+  // Custom domain uses root path
+  return path.startsWith('/') ? path : `/${path}`
 }
 
 ### Erweiterte getImagePath mit Kategorien-Validierung

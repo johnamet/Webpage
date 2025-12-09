@@ -518,7 +518,7 @@ body {
   }
 
   .blue-overlay-bg {
-    background: linear-gradient(rgba(12, 45, 90, 0.7), rgba(12, 45, 90, 0.8)), url('/Webpage/images/randomPictures/UX4.jpg');
+    background: linear-gradient(rgba(12, 45, 90, 0.7), rgba(12, 45, 90, 0.8)), url('/images/randomPictures/UX4.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
