@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
         className="hero mobile-hero-design"
         style={{
           position: 'relative',
-          height: '90vh',
+          height: '83vh',
           overflow: 'hidden',
           marginTop: '84px'
         }}
@@ -288,7 +288,7 @@ const Hero: React.FC = () => {
         className="mobile-contact-buttons"
         style={{
           position: 'absolute',
-          bottom: '20px',
+          bottom: '30px',
           left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex',
