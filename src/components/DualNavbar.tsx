@@ -97,8 +97,8 @@ const DualNavbar: React.FC = () => {
                 <img 
                   src={getImagePath("/images/logo/logo.jpg")} 
                   alt="IT for Youth Ghana" 
-                  className={`w-auto object-contain transition-all duration-300 ${
-                    isScrolled ? 'h-12' : 'h-16'
+                  className={`w-auto object-contain transition-all duration-300 max-w-[120px] ${
+                    isScrolled ? 'h-6' : 'h-8'
                   }`}
                 />
               </motion.div>

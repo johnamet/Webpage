@@ -66,8 +66,8 @@ const Navbar: React.FC = () => {
               <img 
                 src={getImagePath("/images/logo/logo.jpg")} 
                 alt="IT for Youth Ghana logo" 
-                className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? 'h-12' : 'h-16'
+                className={`w-auto object-contain transition-all duration-300 max-w-[120px] ${
+                  isScrolled ? 'h-6' : 'h-8'
                 }`}
               />
             </motion.div>
@@ -266,7 +266,7 @@ const Navbar: React.FC = () => {
                 <img 
                   src={getImagePath("/images/logo/logo.jpg")} 
                   alt="IT for Youth Ghana" 
-                  className="w-24 h-24 mx-auto brightness-0 invert"
+                  className="h-16 w-auto mx-auto brightness-0 invert object-contain max-w-[150px]"
                 />
               </motion.div>
 

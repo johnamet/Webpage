@@ -68,7 +68,8 @@ const Hero: React.FC = () => {
         style={{
           position: 'relative',
           height: '90vh',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          marginTop: '84px'
         }}
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}

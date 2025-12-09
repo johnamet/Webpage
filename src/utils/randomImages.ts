@@ -3,16 +3,14 @@
 // This works correctly for custom domain setup
 export const getImagePath = (path: string) => {
   try {
-    const base = import.meta.env.BASE_URL || '/'
     const cleanPath = path.startsWith('/') ? path : `/${path}`
-    const fullPath = `${base.replace(/\/$/, '')}${cleanPath}`
     
     // Log image paths in development for debugging
     if (import.meta.env.DEV) {
-      console.log(`🖼️ Image path generated: ${fullPath}`)
+      console.log(`🖼️ Image path generated: ${cleanPath}`)
     }
     
-    return fullPath
+    return cleanPath
   } catch (error) {
     console.error(`❌ Error generating image path for: ${path}`, error)
     // Return fallback path

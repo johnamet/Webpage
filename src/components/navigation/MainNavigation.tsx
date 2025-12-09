@@ -65,11 +65,9 @@ const MainNavigation: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img 
-              src={getImagePath("/images/logo/logo.jpg")} 
-              alt="IT for Youth Ghana" 
-              className="h-16 w-auto filter brightness-110 contrast-110"
-            />
+            <div className="h-8 w-auto flex items-center font-bold text-[#0c2d5a] text-lg">
+              IT for Youth Ghana
+            </div>
           </Link>
 
           {/* Desktop & Tablet Navigation - Clean & Professional */}
