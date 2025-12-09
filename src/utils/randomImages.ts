@@ -1,10 +1,42 @@
+// Professional image path handling with error logging and validation
 // Use Vite's BASE_URL which is automatically set from vite.config.ts (base: '/Webpage')
 // This works correctly in both dev (/) and production (/Webpage/)
 export const getImagePath = (path: string) => {
-  const base = import.meta.env.BASE_URL
-  const cleanPath = path.startsWith('/') ? path : `/${path}`
-  // Remove trailing slash from base and leading slash is already in cleanPath
-  return `${base.replace(/\/$/, '')}${cleanPath}`
+  try {
+    const base = import.meta.env.BASE_URL || '/'
+    const cleanPath = path.startsWith('/') ? path : `/${path}`
+    const fullPath = `${base.replace(/\/$/, '')}${cleanPath}`
+    
+    // Log image paths in development for debugging
+    if (import.meta.env.DEV) {
+      console.log(`🖼️ Image path generated: ${fullPath}`)
+    }
+    
+    return fullPath
+  } catch (error) {
+    console.error(`❌ Error generating image path for: ${path}`, error)
+    // Return fallback path
+    return `/images/fallback/placeholder.svg`
+  }
+}
+
+// Professional image validation (client-side)
+export const validateImagePath = async (path: string): Promise<boolean> => {
+  try {
+    const response = await fetch(path, { method: 'HEAD' })
+    const isValid = response.ok
+    
+    if (!isValid && import.meta.env.DEV) {
+      console.warn(`⚠️ Image not found: ${path}`)
+    }
+    
+    return isValid
+  } catch (error) {
+    if (import.meta.env.DEV) {
+      console.warn(`⚠️ Failed to validate image: ${path}`, error)
+    }
+    return false
+  }
 }
 
 // Utility für zufällige Bildauswahl aus dem erweiterten Pool

@@ -4,19 +4,14 @@ import { getImagePath } from '../../../utils/randomImages'
 
 const heroSlides = [
   {
-    image: getImagePath('/images/randomPictures/maingraduationpic.jpg'),
-    title: 'Graduation Success 2024',
-    subtitle: 'Celebrating our students achievements as they complete their IT training journey'
+    image: getImagePath('/images/randomPictures/petertalkingtostudentscoloful.jpg'),
+    title: 'Expert Instruction',
+    subtitle: 'Learn from experienced tech professionals and industry experts'
   },
   {
     image: getImagePath('/images/randomPictures/UX4.jpg'),
     title: 'UX Design Training',
     subtitle: 'Students mastering user experience design and digital product development'
-  },
-  {
-    image: getImagePath('/images/randomPictures/petertalkingtostudentscoloful.jpg'),
-    title: 'Expert Instruction',
-    subtitle: 'Learn from experienced tech professionals and industry experts'
   },
   {
     image: getImagePath('/images/randomPictures/groupworkstudents.jpg'),
@@ -32,6 +27,11 @@ const heroSlides = [
     image: getImagePath('/images/randomPictures/happystudentscasual.jpg'),
     title: 'Your Success Story',
     subtitle: 'Transform your career with professional IT training and certification'
+  },
+  {
+    image: getImagePath('/images/randomPictures/maingraduationpic.jpg'),
+    title: 'Graduation Success 2024',
+    subtitle: 'Celebrating our students achievements as they complete their IT training journey'
   }
 ]
 
