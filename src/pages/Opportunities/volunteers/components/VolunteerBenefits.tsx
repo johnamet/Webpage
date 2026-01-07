@@ -1,8 +1,8 @@
 import React from 'react'
-import SEO from '../../../components/SEO'
-import Hero from '../../../components/shared/Hero'
+import SEO from '../../../../components/SEO'
+import Hero from '../../../../components/shared/Hero'
 
-const Volunteer: React.FC = () => {
+const VolunteerBenefits: React.FC = () => {
   const handleVolunteer = () => {
     window.location.href = '/opportunities/volunteers'
   }
@@ -37,67 +37,71 @@ const Volunteer: React.FC = () => {
               {/* Teaching/Mentoring */}
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-blue-600 text-2xl">🎓</span>
                   </div>
                   <div>
-                    <h3 className="heading-sm mb-4">Teaching & Mentoring</h3>
+                    <h3 className="heading-sm mb-2">Teaching & Mentoring</h3>
                     <p className="text-body text-gray-600 leading-relaxed">
                       Share your tech knowledge and inspire the next generation of IT professionals in Ghana.
                     </p>
                   </div>
                 </div>
+              </div>
                 
-                {/* Technical Support */}
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
+              {/* Technical Support */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-green-600 text-2xl">💻</span>
                   </div>
                   <div>
-                    <h3 className="heading-sm mb-4">Technical Support</h3>
+                    <h3 className="heading-sm mb-2">Technical Support</h3>
                     <p className="text-body text-gray-600 leading-relaxed">
                       Help maintain our IT infrastructure and support smooth operations of training centers.
                     </p>
                   </div>
                 </div>
+              </div>
                 
-                {/* Program Development */}
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
+              {/* Program Development */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-purple-600 text-2xl">📚</span>
                   </div>
                   <div>
-                    <h3 className="heading-sm mb-4">Program Development</h3>
+                    <h3 className="heading-sm mb-2">Program Development</h3>
                     <p className="text-body text-gray-600 leading-relaxed">
                       Help design and improve our educational programs and training materials.
                     </p>
                   </div>
                 </div>
+              </div>
                 
-                {/* Event Organization */}
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
+              {/* Event Organization */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-orange-600 text-2xl">📅</span>
                   </div>
                   <div>
-                    <h3 className="heading-sm mb-4">Event Organization</h3>
+                    <h3 className="heading-sm mb-2">Event Organization</h3>
                     <p className="text-body text-gray-600 leading-relaxed">
                       Assist with organizing workshops, seminars, and community outreach events.
                     </p>
                   </div>
                 </div>
+              </div>
                 
-                {/* Content Creation */}
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
+              {/* Content Creation */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100 p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-pink-600 text-2xl">✍️</span>
                   </div>
                   <div>
-                    <h3 className="heading-sm mb-4">Content Creation</h3>
+                    <h3 className="heading-sm mb-2">Content Creation</h3>
                     <p className="text-body text-gray-600 leading-relaxed">
                       Create engaging content and help us share our mission with a wider audience.
                     </p>
@@ -129,10 +133,11 @@ const Volunteer: React.FC = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
       </div>
     </>
   )
 }
 
-export default Volunteer
+export default VolunteerBenefits

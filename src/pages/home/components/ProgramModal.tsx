@@ -1,14 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useLocation } from 'react-router-dom'
-import { programs, Program } from '../../../data/programs'
+import { programs } from '../../../data/programs'
 
 interface ProgramPageProps {
   programId?: string
 }
 
 export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
-  const location = useLocation()
   const program = programId 
     ? programs.find(p => p.id === programId) 
     : programs[0] // Default to first program if no ID provided
@@ -49,18 +47,19 @@ export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
         </div>
       </section>
 
-        {/* Content */}
-        <div className="p-8">
+      {/* Content Section */}
+      <section className="section bg-white">
+        <div className="container">
           {/* Overview */}
-          <section className="mb-8">
+          <div className="mb-8">
             <h3 className="text-xl font-bold mb-4" style={{ color: '#0c2d5a' }}>Overview</h3>
             <p className="text-neutral-700 leading-relaxed">
               {program.detailContent.overview}
             </p>
-          </section>
+          </div>
 
           {/* Objectives */}
-          <section className="mb-8">
+          <div className="mb-8">
             <h3 className="text-xl font-bold mb-4" style={{ color: '#0c2d5a' }}>Key Objectives</h3>
             <ul className="grid md:grid-cols-2 gap-3">
               {program.detailContent.objectives.map((objective, index) => (
@@ -76,10 +75,10 @@ export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
                 </motion.li>
               ))}
             </ul>
-          </section>
+          </div>
 
           {/* Impact Metrics */}
-          <section className="mb-8">
+          <div className="mb-8">
             <h3 className="text-xl font-bold mb-4" style={{ color: '#0c2d5a' }}>Impact & Results</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {Object.entries(program.detailContent.impact).map(([key, value], index) => (
@@ -104,29 +103,28 @@ export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
                 </motion.div>
               ))}
             </div>
-          </section>
+          </div>
 
           {/* Approach */}
-          <section className="mb-8">
+          <div className="mb-8">
             <h3 className="text-xl font-bold mb-4" style={{ color: '#0c2d5a' }}>Our Approach</h3>
             <p className="text-neutral-700 leading-relaxed">
               {program.detailContent.approach}
             </p>
-          </section>
+          </div>
 
           {/* Success Stories */}
-          <section className="mb-8">
+          <div className="mb-8">
             <h3 className="text-xl font-bold mb-4" style={{ color: '#0c2d5a' }}>Success Stories</h3>
             <div className="rounded-xl p-6 border" style={{ background: 'linear-gradient(135deg, rgba(12, 45, 90, 0.05), rgba(12, 45, 90, 0.03))', borderColor: 'rgba(12, 45, 90, 0.1)' }}>
               <p className="text-neutral-700 leading-relaxed italic">
                 "{program.detailContent.success}"
               </p>
             </div>
-          </section>
+          </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-neutral-200">
-            
             <a
               href="https://www.globalgiving.org/projects/coding-and-digital-skills-for-1000-girls-in-ghana/"
               target="_blank"
@@ -163,20 +161,24 @@ export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
               Support This Program
             </a>
             
-            <button
-              onClick={onClose}
+            <a
+              href="/programs"
               className="flex-1"
               style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
                 padding: '14px 28px',
                 borderRadius: '50px',
                 background: 'white',
                 color: '#0c2d5a',
+                textDecoration: 'none',
                 fontWeight: '600',
                 fontSize: '15px',
                 border: '2px solid #0c2d5a',
                 boxShadow: '0 6px 20px rgba(12, 45, 90, 0.2)',
-                transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                cursor: 'pointer'
+                transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)'
@@ -189,8 +191,8 @@ export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
                 e.currentTarget.style.background = 'white'
               }}
             >
-              Close
-            </button>
+              Back to Programs
+            </a>
           </div>
         </div>
       </section>
@@ -285,4 +287,4 @@ export const ProgramPage: React.FC<ProgramPageProps> = ({ programId }) => {
   )
 }
 
-export default ProgramModal
+export default ProgramPage

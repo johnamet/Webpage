@@ -60,7 +60,11 @@ const Modal: React.FC<ModalProps> = ({
       
       // Focus the modal or close button
       setTimeout(() => {
-        closeButtonRef.current?.focus() || modalRef.current?.focus()
+        if (closeButtonRef.current) {
+          closeButtonRef.current.focus()
+        } else if (modalRef.current) {
+          modalRef.current.focus()
+        }
       }, 100)
     }
 

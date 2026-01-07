@@ -6,16 +6,15 @@ import VolunteerHero from './components/VolunteerHero'
 import VolunteerBenefits from './components/VolunteerBenefits'
 import VolunteerProcess from './components/VolunteerProcess'
 import VolunteerForm from './components/VolunteerForm'
-import { volunteerRoles, volunteerBenefits, volunteerProcess } from './data/volunteerRoles'
+import { volunteerRoles, volunteerBenefits, volunteerProcess, VolunteerRole } from './data/volunteerRoles'
 import { useVolunteerForm } from './hooks/useVolunteerForm'
-import { navigateToPage } from '../../utils/navigation'
 
 const Volunteer: React.FC = () => {
-  const [selectedVolunteerRole, setSelectedVolunteerRole] = useState<any>(null)
+  const [selectedVolunteerRole, setSelectedVolunteerRole] = useState<VolunteerRole | null>(null)
   const [isRoleModalOpen, setIsRoleModalOpen] = useState(false)
   const { formData, setFormData, isSubmitting, submitMessage, handleSubmit } = useVolunteerForm()
 
-  const openRoleModal = (role: any) => {
+  const openRoleModal = (role: VolunteerRole) => {
     setSelectedVolunteerRole(role)
     setIsRoleModalOpen(true)
   }

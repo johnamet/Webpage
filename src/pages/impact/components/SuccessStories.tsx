@@ -14,9 +14,7 @@ interface SuccessStory {
   year: string
 }
 
-interface SuccessStoriesProps {}
-
-const SuccessStories: React.FC<SuccessStoriesProps> = () => {
+const SuccessStories: React.FC = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 

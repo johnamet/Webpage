@@ -9,9 +9,7 @@ interface CommunityImpactItem {
   stats: string
 }
 
-interface CommunityImpactProps {}
-
-const CommunityImpact: React.FC<CommunityImpactProps> = () => {
+const CommunityImpact: React.FC = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 

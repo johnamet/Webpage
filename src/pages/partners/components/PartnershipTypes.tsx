@@ -1,17 +1,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { partnershipOptions } from './partnershipData'
+import { partnershipOptions, PartnershipOption } from './partnershipData'
 
 interface PartnershipTypesProps {
   className?: string
-  onPartnershipClick?: (partnership: any) => void
+  onPartnershipClick?: (partnership: PartnershipOption) => void
 }
 
 const PartnershipTypes: React.FC<PartnershipTypesProps> = ({ 
   className = '',
   onPartnershipClick
 }) => {
-  const handlePartnershipClick = (partnership: any) => {
+  const handlePartnershipClick = (partnership: PartnershipOption) => {
     if (onPartnershipClick) {
       onPartnershipClick(partnership)
     } else {

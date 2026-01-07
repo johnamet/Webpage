@@ -1,4 +1,21 @@
-export const volunteerRoles = [
+export interface VolunteerRole {
+  title: string
+  commitment: string
+  location: string
+  description: string
+  requirements: string[]
+  skills: string[]
+  impact: string
+  detailContent: {
+    overview: string
+    responsibilities: string[]
+    timeCommitment: string
+    requirements: string[]
+    benefits: string[]
+  }
+}
+
+export const volunteerRoles: VolunteerRole[] = [
   {
     title: 'Industry Partnership Developer',
     commitment: '6-8 hours/week',

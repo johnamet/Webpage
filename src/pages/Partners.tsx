@@ -1,15 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import SEO from '../components/SEO'
 import Hero from '../components/shared/Hero'
-import PartnershipTypes from './partners/components/PartnershipTypes'
-import Modal from '../components/Modal'
 
 const Partners: React.FC = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
-  const [selectedPartnership, setSelectedPartnership] = useState<any>(null)
-  const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false)
 
   const handlePartnerWithUs = () => {
     window.location.href = '/contact'
@@ -17,16 +13,6 @@ const Partners: React.FC = () => {
 
   const handleLearnMore = () => {
     document.getElementById('partnership-options')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const openPartnershipModal = (partnership: any) => {
-    setSelectedPartnership(partnership)
-    setIsPartnershipModalOpen(true)
-  }
-
-  const closePartnershipModal = () => {
-    setIsPartnershipModalOpen(false)
-    setSelectedPartnership(null)
   }
 
   const partnershipWays = [

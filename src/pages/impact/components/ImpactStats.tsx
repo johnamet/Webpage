@@ -2,9 +2,7 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { content } from '../../../data/content/index'
 
-interface ImpactStatsProps {}
-
-const ImpactStats: React.FC<ImpactStatsProps> = () => {
+const ImpactStats: React.FC = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 

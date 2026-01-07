@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { VolunteerRole } from '../data/volunteerRoles'
 
 interface VolunteerBenefit {
   icon: string
@@ -9,8 +10,8 @@ interface VolunteerBenefit {
 
 interface VolunteerBenefitsProps {
   benefits: VolunteerBenefit[]
-  volunteerRoles: any[]
-  onRoleClick: (role: any) => void
+  volunteerRoles: VolunteerRole[]
+  onRoleClick: (role: VolunteerRole) => void
 }
 
 const VolunteerBenefits: React.FC<VolunteerBenefitsProps> = ({ benefits, volunteerRoles, onRoleClick }) => {

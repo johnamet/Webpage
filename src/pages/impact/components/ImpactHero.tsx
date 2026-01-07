@@ -2,9 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { content } from '../../../data/content/index'
 
-interface ImpactHeroProps {}
-
-const ImpactHero: React.FC<ImpactHeroProps> = () => {
+const ImpactHero: React.FC = () => {
   return (
     <section className="relative py-24 bg-primary overflow-hidden">
       <div className="absolute inset-0 bg-hero-overlay"></div>

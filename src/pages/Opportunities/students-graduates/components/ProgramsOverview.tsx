@@ -1,18 +1,19 @@
 import React, { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { content } from '../../../../data/content/index'
-import { programs } from '../../../../data/content/programs'
+import { programs, MainProgram, Course, FutureProgram } from '../../../../data/content/programs'
 import Modal from '../../../../components/Modal'
+
+type ProgramType = MainProgram | Course | FutureProgram
 
 const ProgramsOverview: React.FC = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
-  const [selectedProgram, setSelectedProgram] = useState<any>(null)
+  const [selectedProgram, setSelectedProgram] = useState<ProgramType | null>(null)
   const [showModal, setShowModal] = useState(false)
   const [activeTab, setActiveTab] = useState<'past' | 'current' | 'courses' | 'future'>('past')
 
-  const handleProgramClick = (program: any) => {
+  const _handleProgramClick = (program: ProgramType) => {
     setSelectedProgram(program)
     setShowModal(true)
   }
@@ -107,7 +108,7 @@ const ProgramsOverview: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="grid lg:grid-cols-3 gap-8 items-stretch"
         >
-          {getCurrentPrograms().map((program: any, index: number) => (
+          {getCurrentPrograms().map((program, index: number) => (
             <motion.div
               key={program.title}
               initial={{ opacity: 0, y: 50 }}

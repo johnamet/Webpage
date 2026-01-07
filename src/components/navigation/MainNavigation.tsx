@@ -2,15 +2,13 @@ import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { NAVIGATION_CONFIG } from '../../constants/navigation'
-import { Button } from '../ui/Button'
-import { getImagePath } from '../../utils/randomImages'
 
 const MainNavigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
 
-  const isActivePath = (path?: string, subItems?: any[]) => {
+  const isActivePath = (path?: string, subItems?: { path: string }[]) => {
     if (path) return location.pathname === path
     if (subItems) {
       return subItems.some(item => location.pathname === item.path)

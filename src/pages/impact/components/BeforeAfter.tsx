@@ -1,9 +1,7 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-interface BeforeAfterProps {}
-
-const BeforeAfter: React.FC<BeforeAfterProps> = () => {
+const BeforeAfter: React.FC = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
